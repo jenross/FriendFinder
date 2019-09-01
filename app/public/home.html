@@ -1,37 +1,72 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en-us" class="h-100">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Which character from 'The Good Place' are you most like? Fill out the survey to find out!">
+    <meta name="author" content="Jennifer Ross">
     <title>"Good Friend" Finder</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Lato:700&display=swap" rel="stylesheet">
 </head>
-<body>
-    
+<body class="d-flex flex-column h-100">
+
     <style>
         body {
             font-family: 'Lato', sans-serif;
+            background: url('../../images/white_wall_bkgrnd.jpg') no-repeat center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            color: green;
+        }
+
+        h1, h2 { 
+            font-size: 75px; 
+        }
+
+        .footer-links {
+            color: green; 
+        }
+
+        .footer-links:hover {
+            text-decoration: none; 
+            color: grey; 
+        }
+
+        .jumbotron {
+            height: auto; 
+            width: auto; 
+            opacity: 0.8; 
+        }
+
+        .btn-success {
+            background-color: green;  
+        }
+
+        .btn-success:hover {
+            background-color: darkgreen; 
         }
     </style>
 
-    <div class="container">
-        <div class="jumbotron">
-            <h1>"Good Friend" Finder</h1>
-            <h3>Answer a few basic questions.</h3>
-            <h3>Then, find the friend with the greatest compatibility.</h3>
-            <hr>
-            <a href="/survey"><button class="btn btn-danger btn-lg"><span class="fa fa-eye"></span> Go to survey</button></a>
+    <main role="main" class="flex-shrink-0">
+        <div class="container">
+            <div class="jumbotron text-center">
+                <h1>Welcome!</h1>
+                <h2>Everything is fine.</h2>
+                <hr>
+                <!-- <h3 class="text-center">You've made it to "The Good Place" and you're ready to make some friends.</h3> -->
+                <a href="/survey"><button class="btn btn-success btn-lg"><span class="fa fa-eye"></span> Make a friend</button></a>
+            </div>
         </div>
-    </div>
-    
-    <footer>
+    </main>
+
+    <footer role="contentinfo" class="footer mt-auto mx-auto py-3">
         <div class="container">
             <p>
-            <a href="/api/friends">API Friends List</a>
-             | 
-            <a href="https://github.com/jenross/FriendFinder">GitHub Repo</a>
+            <a href="/api/friends" class="footer-links">API Friends List</a> | <a href="https://github.com/jenross/FriendFinder" target="_blank" class="footer-links">GitHub Repo</a>
             </p>
         </div>
     </footer>

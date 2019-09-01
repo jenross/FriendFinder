@@ -1,162 +1,198 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en-us" class="h-100">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Which character from 'The Good Place' are you most like? Fill out the survey to find out!">
+    <meta name="author" content="Jennifer Ross">
     <title>Friend Finder Survey</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Lato:700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="d-flex flex-column h-100">
     <style>
         body {
             font-family: 'Lato', sans-serif;
+            background: url('../../images/white_wall_bkgrnd.jpg') no-repeat center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            color: green;
+        }
+
+        h1, h2 { 
+            font-size: 75px; 
+        }
+
+        .footer-links {
+            color: green; 
+        }
+
+        .footer-links:hover {
+            text-decoration: none; 
+            color: grey; 
+        }
+
+        .jumbotron {
+            height: auto; 
+            width: auto; 
+            opacity: 0.8; 
+        }
+
+        .btn-success {
+            background-color: green;  
+        }
+
+        .btn-success:hover {
+            background-color: darkgreen; 
         }
     </style>
 
-    <div class="row">
+    <main role="main" class="flex-shrink-0">
+        <div class="row">
 
-            <div class="col-12">
-    
-            <div class="card">
-                <div class="card-header">
-                <h3><strong>Survey Questions</strong></h3>
-                </div>
-                <div class="card-body">
-                <form method="POST" role="form">
-                    
-                    <h3><strong>About You</strong></h3>
-                    <div class="form-group">
-
-                    <label for="name">Name (Required)</label>
-                    <input type="text" class="form-control" id="name" required>
-
-                    <label for="name">Link to Photo (Required)</label>
-                    <input type="text" class="form-control" id="photo" required>
-
+                <div class="col-12">
+        
+                <div class="card">
+                    <div class="card-header">
+                    <h3 class="text-center"><strong>Survey Questions</strong></h3>
                     </div>
-    
-                    <h3><strong>Question 1</strong></h3>
-                    <h4>You’ve never met a shrimp you didn’t like.</h4>
-                    <select name="answer-choices" id="question-1" class="selections">
-                        <option value=""><span>Select an option</span></option>
-                        <option value="1">1 (Strongly Disagree)</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5 (Strongly Agree)</option>
-                    </select>
+                    <div class="card-body">
+                    <form method="POST" role="form">
+                        
+                        <h3><strong>About You</strong></h3>
+                        <div class="form-group">
 
-                    <h3><strong>Question 2</strong></h3>
-                    <h4>The Jacksonville Jaguars are the greatest football team of all time!</h4>
-                    <select name="answer-choices" id="question-2" class="selections">
-                        <option value=""><span>Select an option</span></option>
-                        <option value="1">1 (Strongly Disagree)</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5 (Strongly Agree)</option>
-                    </select>
+                        <label class="mt-2" for="name">Name (Required)</label>
+                        <input type="text" class="form-control" id="name" required>
 
-                    <h3><strong>Question 3</strong></h3>
-                    <h4>Any place or thing in the universe can be up to 104% perfect. That’s how we got Beyoncé.</h4>
-                    <select name="answer-choices" id="question-3" class="selections">
-                        <option value=""><span>Select an option</span></option>
-                        <option value="1">1 (Strongly Disagree)</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5 (Strongly Agree)</option>
-                    </select>
+                        <label for="name">Link to Photo (Required)</label>
+                        <input type="text" class="form-control" id="photo" required>
+                        <hr class="mt-5">
+                        </div>
+        
+                        <h3 class="mt-2 py-2"><strong>Question 1</strong></h3>
+                        <h4 class="py-2">You’ve never met a shrimp you didn’t like.</h4>
+                        <select name="answer-choices" id="question-1" class="selections">
+                            <option value=""><span>Select an option</span></option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>
 
-                    <h3><strong>Question 4</strong></h3>
-                    <h4>There’s no problem a Molotov cocktail can’t solve.</h4>
-                    <select name="answer-choices" id="question-4" class="selections">
-                        <option value=""><span>Select an option</span></option>
-                        <option value="1">1 (Strongly Disagree)</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5 (Strongly Agree)</option>
-                    </select>
+                        <h3 class="mt-2 py-2"><strong>Question 2</strong></h3>
+                        <h4 class="py-2">The Jacksonville Jaguars are the greatest football team of all time!</h4>
+                        <select name="answer-choices" id="question-2" class="selections">
+                            <option value=""><span>Select an option</span></option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>
 
-                    <h3><strong>Question 5</strong></h3>
-                    <h4>Why stay silent when you can name-drop famous celebs you’ve brushed shoulders with at your Heir B&B?</h4>
-                    <select name="answer-choices" id="question-5" class="selections">
-                        <option value=""><span>Select an option</span></option>
-                        <option value="1">1 (Strongly Disagree)</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5 (Strongly Agree)</option>
-                    </select>
+                        <h3 class="mt-2 py-2"><strong>Question 3</strong></h3>
+                        <h4 class="py-2">Any place or thing in the universe can be up to 104% perfect. That’s how we got Beyoncé.</h4>
+                        <select name="answer-choices" id="question-3" class="selections">
+                            <option value=""><span>Select an option</span></option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>
 
-                    <h3><strong>Question 6</strong></h3>
-                    <h4>“Ya basic!” is one of your favorite insults.</h4>
-                    <select name="answer-choices" id="question-6" class="selections">
-                        <option value=""><span>Select an option</span></option>
-                        <option value="1">1 (Strongly Disagree)</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5 (Strongly Agree)</option>
-                    </select>
+                        <h3 class="mt-2 py-2"><strong>Question 4</strong></h3>
+                        <h4 class="py-2">There’s no problem a Molotov cocktail can’t solve.</h4>
+                        <select name="answer-choices" id="question-4" class="selections">
+                            <option value=""><span>Select an option</span></option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>
 
-                    <h3><strong>Question 7</strong></h3>
-                    <h4>The only thing you experience more frequently than stomachaches is a paralyzing inability to make decisions about...well, anything.</h4>
-                    <select name="answer-choices" id="question-7" class="selections">
-                        <option value=""><span>Select an option</span></option>
-                        <option value="1">1 (Strongly Disagree)</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5 (Strongly Agree)</option>
-                    </select>
+                        <h3 class="mt-2 py-2"><strong>Question 5</strong></h3>
+                        <h4 class="py-2">Why stay silent when you can name-drop famous celebs you’ve brushed shoulders with at your Heir B&B?</h4>
+                        <select name="answer-choices" id="question-5" class="selections">
+                            <option value=""><span>Select an option</span></option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>
 
-                    <h3><strong>Question 8</strong></h3>
-                    <h4>You’d probably make a pretty hot centaur.</h4>
-                    <select name="answer-choices" id="question-8" class="selections">
-                        <option value=""><span>Select an option</span></option>
-                        <option value="1">1 (Strongly Disagree)</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5 (Strongly Agree)</option>
-                    </select>
+                        <h3 class="mt-2 py-2"><strong>Question 6</strong></h3>
+                        <h4 class="py-2">“Ya basic!” is one of your favorite insults.</h4>
+                        <select name="answer-choices" id="question-6" class="selections">
+                            <option value=""><span>Select an option</span></option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>
 
-                    <h3><strong>Question 9</strong></h3>
-                    <h4>Your soul mates are John Locke, Kierkegaard, and...books. Lots of books.</h4>
-                    <select name="answer-choices" id="question-9" class="selections">
-                        <option value=""><span>Select an option</span></option>
-                        <option value="1">1 (Strongly Disagree)</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5 (Strongly Agree)</option>
-                    </select>
+                        <h3 class="mt-2 py-2"><strong>Question 7</strong></h3>
+                        <h4 class="py-2">The only thing you experience more frequently than stomachaches is a paralyzing inability to make decisions about...well, anything.</h4>
+                        <select name="answer-choices" id="question-7" class="selections">
+                            <option value=""><span>Select an option</span></option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>
 
-                    <h3><strong>Question 10</strong></h3>
-                    <h4>A daunting, impossible challenge awaits? Sign me up!</h4>
-                    <select name="answer-choices" id="question-10" class="selections">
-                        <option value=""><span>Select an option</span></option>
-                        <option value="1">1 (Strongly Disagree)</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5 (Strongly Agree)</option>
-                    </select>
-    
-                </form>
-                <br>
-                <div class="text-right">
-                    <button type="submit" class="btn btn-primary btn-md" id="add-btn"><span class="fa fa-fire"></span> Submit</button>
-                </div>
+                        <h3 class="mt-2 py-2"><strong>Question 8</strong></h3>
+                        <h4 class="py-2">You’d probably make a pretty hot centaur.</h4>
+                        <select name="answer-choices" id="question-8" class="selections">
+                            <option value=""><span>Select an option</span></option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>
+
+                        <h3 class="mt-2 py-2"><strong>Question 9</strong></h3>
+                        <h4 class="py-2">Your soul mates are John Locke, Kierkegaard, and...books. Lots of books.</h4>
+                        <select name="answer-choices" id="question-9" class="selections">
+                            <option value=""><span>Select an option</span></option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>
+
+                        <h3 class="mt-2 py-2"><strong>Question 10</strong></h3>
+                        <h4 class="py-2">A daunting, impossible challenge awaits? Sign me up!</h4>
+                        <select name="answer-choices" id="question-10" class="selections">
+                            <option value=""><span>Select an option</span></option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>
+        
+                    </form>
+                    <br>
+                    <div class="text-right">
+                        <button type="submit" class="btn btn-primary btn-md" id="add-btn"><span class="fa fa-fire"></span> Submit</button>
+                    </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-
+    </main>
     <div class="modal" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
@@ -177,14 +213,12 @@
         </div>
     </div>
 
-    <footer>
-            <div class="container">
-                <p>
-                <a href="/api/friends">API Friends List</a>
-                 | 
-                <a href="https://github.com/jenross/FriendFinder" target="_blank">GitHub Repo</a>
-                </p>
-            </div>
+    <footer role="contentinfo" class="footer mt-auto mx-auto py-3">
+        <div class="container">
+            <p>
+            <a href="/api/friends" class="footer-links">API Friends List</a> | <a href="https://github.com/jenross/FriendFinder" target="_blank" class="footer-links">GitHub Repo</a>
+            </p>
+        </div>
     </footer>
 
     <script type="text/javascript">
