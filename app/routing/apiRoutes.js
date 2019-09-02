@@ -13,20 +13,21 @@ module.exports = function(app) {
 
   app.get("/api/friends", function(req, res) {
     res.json(friendData);
+    console.log(friendData);
   });
 
 
   // API POST Request
 
   app.post("/api/friends", function(req, res) {
-    // if (tableData.length < 5) {
       friendData.push(req.body);
       res.json(true);
-    // }
-    // else {
-    //   waitListData.push(req.body);
-    //   res.json(false);
-    // }
+      
+      for (let i = 0; i < friendData.length; i++) {
+          let scores = friendData[i].scores;
+          console.log(scores);
+      }
+
   });
 
 //   app.post("/api/clear", function(req, res) {
