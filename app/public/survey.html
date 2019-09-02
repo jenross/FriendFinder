@@ -14,11 +14,11 @@
     <style>
         body {
             font-family: 'Lato', sans-serif;
-            background-image: url('https://unsplash.com/photos/4Zaq5xY5M_c') no-repeat center fixed;
-            /* -webkit-background-size: cover;
+            background: url('https://images.unsplash.com/photo-1531685250784-7569952593d2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1334&q=80') no-repeat center fixed;
+            -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
-            background-size: cover; */
+            background-size: cover;
             color: green;
         }
 
@@ -210,17 +210,17 @@
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title">Modal title</h5>
+                  <h5 class="modal-title">Your Match</h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
                 <div class="modal-body">
-                  <p>Modal body text goes here.</p>
+                  <p class="friend-name"></p>
+                  <img class="friend-img">
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
                 </div>
             </div>
         </div>
@@ -239,18 +239,39 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
     <script type="text/javascript">
+
+    function formComplete() {
+        let nameComplete = true; 
+        let photoComplete = true; 
+        let surveyComplete = true; 
+        
+        if ($("#name").val() === "") {
+            nameComplete = false; 
+            alert("Please enter your name.");
+        }
+        if ($("#photo").val() === "") {
+            photoComplete = false; 
+            alert("Please enter a link for a photo.");
+        }
+    }
         $("#add-btn").on("click", function(event) {
-          event.preventDefault();
+        //   event.preventDefault();
+          formComplete(); 
           let newFriend = {
             name: $("#name").val().trim(),
             photo: $("#photo").val().trim(),
-            scores: $("#scores").val().trim()
+            scores: [$("#question-1").val(), $("#question-2").val(), $("#question-3").val(), $("#question-4").val(), $("#question-5").val(), $("#question-6").val(), $("#question-7").val(), $("#question-8").val(), $("#question-9").val(), $("#question-10").val()]
           };
-    
+          console.log(newFriend.scores);
+          console.log(newFriend);
+
           $.post("/api/friends", newFriend)
             .then(function(data) {
               console.log("survey.html", data);
               alert("Matching friend...");
+              $("#name").val("");
+              $("#photo").val("");
+              $(".selections").val("");
             });
         });
       </script>
