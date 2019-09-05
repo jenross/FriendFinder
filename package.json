@@ -20,6 +20,7 @@
   "homepage": "https://github.com/jenross/FriendFinder#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "nodemon": "^1.19.2",
     "path": "^0.12.7"
   }
 }
